@@ -91,7 +91,7 @@ class KalkulatorBangunRuangFactory {
     }
 }
 
-$satuan = ['rusuk'=> 0, 'panjang'=> 0, 'lebar'=> 0, 'jejari'=> 10, 'tinggi'=>0];
+$satuan = ['rusuk'=> 12, 'panjang'=> 0, 'lebar'=> 0, 'jejari'=> 0, 'tinggi'=>0];
 class Json {
     public static function form($data){
         return json_encode($data);
@@ -101,7 +101,7 @@ echo 'Input : <br>';
 print(Json::form($satuan));
 echo '<br><br>';
 
-$pilihanKalkulatorBangunRuang = 'kelilingLingkaran';
+$pilihanKalkulatorBangunRuang = 'volumeKubus';
 $kalkulatorBangunRuangFactory = new KalkulatorBangunRuangFactory();
 $kalkulatorBangunRuang = $kalkulatorBangunRuangFactory->initializeKalkulatorBangunRuang($pilihanKalkulatorBangunRuang);
 $hasilKalkulatorBangunRuang = $kalkulatorBangunRuang->hitungBangunRuang($satuan);
